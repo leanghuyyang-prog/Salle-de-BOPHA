@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salle de BOPHA - Français A1</title>
+<style>
+:root {
+  --yellow: #FFCF56;
+  --coral: #FF8066;
+  --teal: #5CBCC5;
+  --cream: #F8F4E9;
+  --navy: #253A53;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--navy);
+}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+}
+nav a:hover { color: var(--coral); }
+.hero {
+  background: var(--yellow);
+  padding: 55px 20px;
+  text-align: center;
+}
+.hero h1 { font-size: 38px; }
+.hero p { font-size: 19px; }
+section {
+  padding: 35px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  border-bottom: 3px solid var(--teal);
+  padding-bottom: 10px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #253a5315;
+}
+.card h3 { color: var(--coral); }
+button {
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+}
+button:hover { background: var(--yellow); }
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70%;
+}
+.result {
+  font-weight: bold;
+  margin-top: 15px;
+}
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+@media(max-width:600px) {
+  nav a { display: inline-block; margin: 5px; }
+  .hero h1 { font-size: 28px; }
+  input { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌼 Salle de BOPHA</h1>
+  <p>Mon espace d'apprentissage du français</p>
+</header>
+
+<nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#vocabulaire">Vocabulaire</a>
+  <a href="#grammaire">Grammaire</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#questions">Question-Réponse</a>
+</nav>
+
+<div class="hero" id="accueil">
+  <h1>Bienvenue dans ta salle de français !</h1>
+  <p>Apprends, pratique et progresse à ton rythme.</p>
+  <button onclick="document.getElementById('vocabulaire').scrollIntoView()">
+    Commencer à apprendre
+  </button>
+</div>
+
+<section id="vocabulaire">
+  <h2>📚 1. Vocabulaire</h2>
+  <p>Découvre quelques mots français de niveau A1.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>👨 La famille</h3>
+      <p>Le père - The father</p>
+      <p>La mère - The mother</p>
+      <p>Le frère - The brother</p>
+      <p>La sœur - The sister</p>
+    </div>
+
+    <div class="card">
+      <h3>🏫 L'école</h3>
+      <p>Un livre - A book</p>
+      <p>Un stylo - A pen</p>
+      <p>Une table - A table</p>
+      <p>Une chaise - A chair</p>
+    </div>
+
+    <div class="card">
+      <h3>🍎 Les aliments</h3>
+      <p>Une pomme - An apple</p>
+      <p>Du pain - Bread</p>
+      <p>Du lait - Milk</p>
+      <p>De l'eau - Water</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Les couleurs</h3>
+      <p>Rouge - Red</p>
+      <p>Bleu - Blue</p>
+      <p>Jaune - Yellow</p>
+      <p>Vert - Green</p>
+    </div>
+  </div>
+</section>
+
+<section id="grammaire">
+  <h2>✏️ 2. Grammaire</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Le verbe ÊTRE</h3>
+      <p>Je suis</p>
+      <p>Tu es</p>
+      <p>Il / Elle est</p>
+      <p>Nous sommes</p>
+      <p>Vous êtes</p>
+      <p>Ils / Elles sont</p>
+      <p><b>Exemple :</b> Je suis professeur.</p>
+    </div>
+
+    <div class="card">
+      <h3>Le verbe AVOIR</h3>
+      <p>J'ai</p>
+      <p>Tu as</p>
+      <p>Il / Elle a</p>
+      <p>Nous avons</p>
+      <p>Vous avez</p>
+      <p>Ils / Elles ont</p>
+      <p><b>Exemple :</b> J'ai un livre.</p>
+    </div>
+
+    <div class="card">
+      <h3>Les articles</h3>
+      <p>Masculin : le / un</p>
+      <p>Féminin : la / une</p>
+      <p>Pluriel : les / des</p>
+      <p><b>Exemple :</b> Une maison.</p>
+    </div>
+
+    <div class="card">
+      <h3>La négation</h3>
+      <p>Ne ... pas</p>
+      <p>Je parle français.</p>
+      <p>Je ne parle pas français.</p>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🎯 3. Quiz</h2>
+  <div class="card">
+    <h3>Question : Comment dit-on "Thank you" en français ?</h3>
+
+    <button onclick="checkAnswer('Bonjour')">Bonjour</button>
+    <button onclick="checkAnswer('Merci')">Merci</button>
+    <button onclick="checkAnswer('Au revoir')">Au revoir</button>
+
+    <p class="result" id="result"></p>
+  </div>
+</section>
+
+<section id="questions">
+  <h2>🤖 4. Question-Réponse</h2>
+
+  <div class="card">
+    <h3>Bonjour ! Je suis BOPHA.</h3>
+    <p>Pose-moi une question sur le français A1.</p>
+
+    <input type="text" id="question"
+      placeholder="Écris ta question ici...">
+
+    <button onclick="askBopha()">Envoyer</button>
+
+    <p class="result" id="answer"></p>
+  </div>
+</section>
+
+<footer>
+  <h3>🌼 Salle de BOPHA</h3>
+  <p>Apprendre le français, un pas à la fois.</p>
+  <p>© 2026 - Salle de BOPHA</p>
+</footer>
+
+<script>
+function checkAnswer(answer) {
+  const result = document.getElementById("result");
+
+  if (answer === "Merci") {
+    result.innerHTML = "🎉 Bravo ! C'est la bonne réponse !";
+    result.style.color = "green";
+  } else {
+    result.innerHTML = "❌ Essaie encore ! Tu peux réussir.";
+    result.style.color = "red";
+  }
+}
+
+function askBopha() {
+  const question = document.getElementById("question")
+    .value.toLowerCase();
+
+  const answer = document.getElementById("answer");
+
+  if (question.includes("être")) {
+    answer.innerHTML =
+      "Le verbe être : je suis, tu es, il est, nous sommes, vous êtes, ils sont.";
+  } else if (question.includes("avoir")) {
+    answer.innerHTML =
+      "Le verbe avoir : j'ai, tu as, il a, nous avons, vous avez, ils ont.";
+  } else if (question.includes("bonjour")) {
+    answer.innerHTML =
+      "Bonjour est une salutation utilisée pour dire hello en français.";
+  } else if (question.includes("article") ||
+             question.includes("un") ||
+             question.includes("une")) {
+    answer.innerHTML =
+      "Un accompagne généralement un nom masculin. Une accompagne un nom féminin. Exemple : un livre, une maison.";
+  } else if (question.includes("exercice") ||
+             question.includes("quiz")) {
+    answer.innerHTML =
+      "Petit exercice : complète la phrase : Je ___ élève. Indice : utilise le verbe être.";
+  } else {
+    answer.innerHTML =
+      "Très bonne question ! Essaie de préciser ta question. Je peux t'aider avec les verbes être et avoir, les articles et le vocabulaire A1.";
+  }
+}
+</script>
+
+</body>
+</html>
